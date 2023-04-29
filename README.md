@@ -32,16 +32,16 @@ It will run the app on port 3000 of your localhost.
 
 ## Warning
 
-Only development version of this NewsAPI is free to use thus, you can't run it on network or Deploy it.
+* Only development version of this NewsAPI is free to use thus, you can't run it on network or Deploy it. 
 
 To do so you'll have to buy the Business or Advanced version of key.
 
-.env.local is a local file and contains local values thus not preferred for network usage.
+* .env.local is a local file and contains local values thus not preferred for network usage.
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first
+* Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+* Please make sure to update tests as appropriate.
 
