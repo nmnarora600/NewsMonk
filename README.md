@@ -2,41 +2,76 @@
 
 NewsMonk is a React based web app to fetch and read news from NewsAPI and have various categories to classify news to watch .
 
-## Installation
+## Clone the repo
+* Open your terminal.
 
-To install libraries you just need to clone the repo and enter npm install to install required node modules.
+* Change the current working directory to the location where you want to clone the repository.
 
+* Run the following command to clone the repository:
+```bash
+git clone https://github.com/nmnarora600/NewsMonk.git
+```
+* cd to the NewsMonk folder
+
+## Installing the Required Dependencies
+
+After cloning the repo run run following commands to install required node modules.
+
+* check in to frontend
+```bash
+cd NewsMonk/frontend
+```
+* install node modules for frontend
+```bash
+npm install
+```
+* check in backend
+```bash
+cd ../backend
+```
+* install node modules for backend
 ```bash
 npm install
 ```
 
 ## Getting Api Key
 
-To get news from this web app you must get an api key from __[Link](https://newsapi.org/ "NewsAPI's Homepage")__
-and create a __.env.local__ file at outermost of folder where package.json exists.
+To get news from this web app you must get an api key from __[NewsAPI](https://newsapi.org/)__
 
-Inside .env.local enter your api key in following format:
+After getting your development or business api from NewsAPI and paste it in the .env file of frontend folder.
 
 ```bash
 REACT_APP_NEWSAPI_KEY = "YOUR-API-KEY HERE"
 ```
 make sure to not erase " " marks as api key must be sent as a string.
 
-
 ## How to Run
-After following above steps just open the folder in cmd, powershell etc and run the given command
+
+After following above steps just open the frontend folder in cmd, powershell etc.
 ```bash
-npm start
+cd Path/to/the/repo/NewsMonk/frontend
 ```
-It will run the app on port 3000 of your localhost.
+* Run the following command to start app
 
-## Warning
+```bash
+npm run both
+```
+* Open your Browser and go to the following link to see your app 
 
-* Only development version of this NewsAPI is free to use thus, you can't run it on network or Deploy it. 
+```bash
+http://localhost:3000/
+```
 
-To do so you'll have to buy the Business or Advanced version of key.
+## Deployed Version
+* Alternatively, you can also access the deployed version of this application at __[Link](www.icodewithcoffee.ml)__.
 
-* .env.local is a local file and contains local values thus not preferred for network usage.
+* Please note that the deployed version is primarily for demonstration purposes and may not have the complete functionality or the latest updates found in the source code.
+
+## Disclaimer
+
+* This application is for educational purposes only and should not be used for commercial purposes. The information, code, and data provided are meant as educational examples and should not be integrated into any commercial application.
+
+* Commercial usage of this application or its contents is strictly not recommended. To use this application commercially, please purchase the business version of the API key from NewsAPI.
 
 ## Contributing
 
