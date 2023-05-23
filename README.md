@@ -63,7 +63,7 @@ http://localhost:3000/
 ```
 
 ## Deployed Version
-* Alternatively, you can also access the deployed version of this application at __[Link](www.icodewithcoffee.ml)__.
+* Alternatively, you can also access the deployed version of this application at __[Link](https://www.icodewithcoffee.ml)__.
 
 * Please note that the deployed version is primarily for demonstration purposes and may not have the complete functionality or the latest updates found in the source code.
 
