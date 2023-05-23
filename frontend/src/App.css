@@ -57,6 +57,16 @@
   transform: scale(1.15);
 }
 
+
+.FootName:hover{
+
+transform: scale(1.05);
+color: white;
+font-weight: 500;
+transition: transform .6s ease;
+
+}
+
 /* Scrollbar */
 
 

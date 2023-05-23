@@ -1,10 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React,{useState, useEffect} from "react";
+import { Link , useNavigate} from "react-router-dom";
 const NavBar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [firstLoad, setFirstLoad]=useState(true);
+  const handleMenuToggle = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
+  let navigate= useNavigate();
+
+  useEffect(()=>{
+    if(firstLoad){
+    navigate('/')
+    setFirstLoad(false);
+  }
+  },[firstLoad,navigate])
   return (
     <>
-      <nav
-        className="navbar navbar-expand-lg fixed-top bg-body-tertiary navbar-fixed-top navbar-default"
+       <nav
+        className={`navbar navbar-expand-lg fixed-top bg-body-tertiary navbar-fixed-top navbar-default ${
+          isMenuOpen ? "show" : ""
+        }`}
         data-bs-theme="dark"
       >
         <div className="container">
@@ -12,6 +32,7 @@ const NavBar = () => {
             className="navbar-brand"
             to="/general"
             style={{ color: "rgb(60, 209, 60)" }}
+            onClick={handleLinkClick}
           >
             News<span style={{ color: "yellow" }}>Monk</span>
           </Link>
@@ -21,45 +42,49 @@ const NavBar = () => {
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen ? "true" : "false"}
             aria-label="Toggle navigation"
+            onClick={handleMenuToggle}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
               <li className="nav-item">
-                <Link className="nav-link mx-1 " to="/">
+                <Link className="nav-link mx-1" to="/" onClick={handleLinkClick}>
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link mx-1" to="/business">
+                <Link className="nav-link mx-1" to="/business" onClick={handleLinkClick}>
                   Business
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link mx-1" to="/entertainment">
+                <Link className="nav-link mx-1" to="/entertainment" onClick={handleLinkClick}>
                   Entertainment
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link mx-1" to="/health">
+              <li className="nav-item" >
+                <Link className="nav-link mx-1" to="/health" onClick={handleLinkClick}>
                   Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link mx-1" to="/science">
+                <Link className="nav-link mx-1" to="/science" onClick={handleLinkClick}>
                   Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link mx-1" to="/sports">
+                <Link className="nav-link mx-1" to="/sports" onClick={handleLinkClick}>
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link mx-1" to="/technology">
+                <Link className="nav-link mx-1" to="/technology" onClick={handleLinkClick}>
                   Technology
                 </Link>
               </li>
