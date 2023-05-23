@@ -11,7 +11,7 @@ NewsMonk is a React based web app to fetch and read news from NewsAPI and have v
 ```bash
 git clone https://github.com/nmnarora600/NewsMonk.git
 ```
-* cd to the NewsMonk folder
+
 
 ## Installing the Required Dependencies
 
